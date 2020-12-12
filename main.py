@@ -34,7 +34,7 @@ def getting_text():
     repeated = True
     
     #getting the id number for the next tweet to be stored in database
-    with open('twitterBot/output.txt', 'r') as f:
+    with open('twitterBot/idNumber.txt', 'r') as f:
         idNum = int(f.readline())
         f.close()
     
@@ -93,7 +93,7 @@ def getting_text():
     conn.close()
 
     #change the id number for next article
-    with open('twitterBot/output.txt', 'w') as f:
+    with open('twitterBot/idNumber.txt', 'w') as f:
         f.write(str(idNum + 1))
         f.close()
 
